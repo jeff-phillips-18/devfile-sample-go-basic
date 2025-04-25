@@ -28,8 +28,9 @@ spec:
   - name: path-context
     value: .
   pipelineRef:
-    bundle: quay.io/redhat-appstudio/build-templates-bundle:13f5d9c921b3f727684a00084037f673a0dc4273
     name: docker-build
+  taskRunTemplate:
+    serviceAccountName: build-pipeline-devfile-sample-go-basic
   workspaces:
   - name: workspace
     volumeClaimTemplate:
